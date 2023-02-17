@@ -151,5 +151,3 @@ if __name__=="__main__":
             speak("Thanks you for using Martian!")
 
             exit()
-
-# This is just an example! You can add more features to it if you want! 
