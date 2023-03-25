@@ -57,7 +57,8 @@ if __name__=="__main__":
             speak('On average, Mars is 225 million kilometers away from Earth.')
         elif 'how are you' in query:
             speak('i am fine')
-        
+          
+        # Let's tell Martian to print the entire code!
         elif 'program for speed dial button menu in kivy MD'in query or 'speed dial button menu using kiwi MD' in query or 'speed dial button in python' in query:
             print("""
 from kivy.lang import Builder
