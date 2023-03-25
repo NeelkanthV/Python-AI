@@ -27,7 +27,7 @@ def wishMe():
     elif hour>=12 and hour<17:
         speak("Good Afternoon Sir")
     else:
-        speak("Good evening!I am Martian,sir! I hope you had a lovely day and that,better yet,is coming tomorrow")
+        speak("Good evening! I hope you had a lovely day and that,better yet,is coming tomorrow")
     
 
 def takeCommand():
@@ -105,8 +105,6 @@ MDScreen:
 
 Example().run()
 """)
-        elif 'what is the universal truth?' in query:
-            speak('You will be single forever')
         
         elif "who are you" in query:
             speak("Sir I am Martian personal aasistant")
