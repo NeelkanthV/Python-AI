@@ -16,7 +16,7 @@ engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # Print(voices [0].id)
 engine.setProperty('voice',voices[0].id) 
-
+# For a male voice, type [0], and for a female voice, type[1]!
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
