@@ -130,7 +130,7 @@ def get_response(query):
 # Main Program
 if __name__ == "__main__":
     wish_me()
-    speak("I am Martian, your CSV-driven assistant. How can I help you today?")
+    speak("I am Martian, your personal AI assistant. How can I help you today?")
 
     while True:
         query = take_command()
@@ -145,5 +145,6 @@ if __name__ == "__main__":
             speak("I don't know this command yet. Try another one.")
         else:
             speak(response)
+
 
 
