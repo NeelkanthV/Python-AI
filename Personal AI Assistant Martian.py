@@ -18,10 +18,10 @@ import webbrowser
 import pandas as pd
 import os
 
-# ----------------- Constants -----------------
+# Constants 
 DATA_FILE = "data/martian_dataset.csv"
 
-# ----------------- Load Dataset -----------------
+# Load Dataset 
 if os.path.exists(DATA_FILE):
     df = pd.read_csv(DATA_FILE)
 else:
@@ -57,7 +57,7 @@ else:
     df = pd.DataFrame(data)
     df.to_csv(DATA_FILE, index=False)
 
-# ----------------- Text-to-Speech Setup -----------------
+# Text-to-Speech Setup 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -67,7 +67,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# ----------------- Greetings -----------------
+# Greetings
 def wish_me():
     """Greet the user based on current time."""
     hour = datetime.datetime.now().hour
@@ -78,7 +78,7 @@ def wish_me():
     else:
         speak("Good evening! Have a great day!")
 
-# ----------------- Listen for Voice Input -----------------
+# Listen for Voice Input
 def take_command():
     """Listen to the user's voice and return it as text."""
     r = sr.Recognizer()
@@ -94,7 +94,7 @@ def take_command():
         return "none"
     return query.lower()
 
-# ----------------- Get Response from CSV -----------------
+#Get Response from CSV 
 def get_response(query):
     """Check the CSV dataset for a matching command and respond."""
     row = df[df['command'].str.lower() == query.lower()]
@@ -127,7 +127,7 @@ def get_response(query):
     else:
         return None
 
-# ----------------- Main Program -----------------
+# Main Program
 if __name__ == "__main__":
     wish_me()
     speak("I am Martian, your CSV-driven assistant. How can I help you today?")
@@ -145,4 +145,5 @@ if __name__ == "__main__":
             speak("I don't know this command yet. Try another one.")
         else:
             speak(response)
+
 
